@@ -1,0 +1,67 @@
+plugins {
+    // Apply the application plugin to add support for building a CLI application in Java.
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
+}
+
+group = 'physicianconnect'
+version = '2.0'
+
+sourceCompatibility = '21'
+
+repositories {
+    // Use Maven Central for resolving dependencies.
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.xerial:sqlite-jdbc:3.45.1.0'
+
+  
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.13.1'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.13.1'
+
+   
+    testImplementation 'org.mockito:mockito-core:5.18.0'
+    testImplementation 'org.mockito:mockito-junit-jupiter:5.18.0' 
+    testImplementation 'org.mockito:mockito-inline:5.2.0'
+
+   
+    testImplementation 'org.assertj:assertj-core:3.27.3' 
+    testImplementation 'org.assertj:assertj-swing-junit:3.17.1'
+
+   
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.13.1'
+}
+
+test {
+    useJUnitPlatform {
+        excludeTags 'ui'
+    }
+}
+
+application {
+    // Define the main class for the application.
+    mainClass = 'physicianconnect.App'
+}
+
+jar {
+    manifest {
+        attributes(
+            'Main-Class': application.mainClass
+        )
+    }
+
+    // Include all dependencies in the JAR (fat jar)
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+javafx {
+    version = '17.0.2'
+    modules = ['javafx.controls', 'javafx.fxml']
+}
