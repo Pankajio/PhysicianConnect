@@ -1,0 +1,494 @@
+/* ---------- Design tokens ---------- */
+:root {
+    --primary: #0060df;
+    --primary-dark: #0040a8;
+    --accent: #00c9a7;
+    --text: #202124;
+    --text-light: #5f6368;
+    --bg: #ffffff;
+    --bg-alt: #f7f9fc;
+    --radius: .75rem;
+    --header-h: 90px;
+}
+
+/* ---------- Global resets & base ---------- */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:target {
+    scroll-margin-top: 50px;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.65;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+a:hover,
+a:focus {
+    color: var(--accent);
+}
+
+/* ---------- Layout ---------- */
+.container {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* ---------- Hero ---------- */
+header.hero {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.25rem 0;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: #fff;
+    transition: all 0.3s ease;
+    height: 92px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+header.hero.shrink {
+    height: 56px;
+    font-size: 0.95rem;
+    padding-bottom: 12px;
+}
+
+.logo {
+    font-size: 1.2rem;
+    color: #fff;
+    padding-top: 17px;
+}
+
+
+.hero-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 12px;
+}
+
+
+/* nav tweaks for horizontal layout */
+#site-nav ul {
+    justify-content: flex-end;
+    /* push to the right in the bar */
+    gap: 1.25rem;
+}
+
+
+/* ---------- Nav ---------- */
+nav {
+    margin-top: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+}
+
+nav a {
+    color: #fff;
+    font-weight: 600;
+    padding: .5rem .25rem;
+    border-bottom: 2px solid transparent;
+    transition: opacity .2s ease, border-color .2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    opacity: .85;
+    border-color: #fff;
+}
+
+.intro {
+    background: var(--bg-alt);
+    text-align: center;
+    padding: 2rem 0 2.25rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
+}
+
+/* ---------- Home banner image -----------------------------------------*/
+.home-banner {
+    display: flex;
+    justify-content: center;
+    background: var(--bg);
+    margin-top: var(--header-h);
+}
+
+.home-banner img {
+    width: 100%;
+    height: 600px;
+    max-width: 1190px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .04);
+}
+
+.subtitle {
+    margin: 1rem 0 0;
+    /* pulls it closer to the bar */
+    font-size: 1.15rem;
+    font-weight: 300;
+    opacity: .85;
+    text-align: center;
+}
+
+/* ---------- Features ---------- */
+.features-highlight {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.highlight:hover {
+    transform: scale(1.03);
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    background: var(--bg);
+    border: 3px solid var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.circle img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.highlight h4 {
+    font-size: 1.125rem;
+    margin: 0.5rem 0 0.25rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.highlight p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    max-width: 28ch;
+}
+
+
+
+/* ---------- Sections ---------- */
+section.section {
+    padding: 4rem 0 3.5rem;
+}
+
+section.section.alt {
+    background: var(--bg-alt);
+}
+
+section h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 3rem;
+    height: .25rem;
+    background: var(--accent);
+    margin-top: .75rem;
+    border-radius: var(--radius);
+}
+
+/* ---------- Lists ---------- */
+ul.feature-list {
+    list-style: none;
+    margin: 2rem 0 0;
+    padding: 0;
+    display: block;
+}
+
+.feature-list li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    transition: transform 0.2s ease;
+}
+
+.feature-list li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    top: 0.1rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+/* Subtle hover effect */
+.feature-list li:hover {
+    transform: translateX(4px);
+}
+
+
+ul.team-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: grid;
+    gap: 1rem;
+}
+
+.team-list li {
+    position: relative;
+    padding-left: 2rem;
+    background: var(--bg);
+    border: 1px solid #e4e7eb;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .04);
+    padding: 1rem 1.25rem 1rem 2.75rem;
+    transition: transform .2s ease, box-shadow .2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* align text at the top */
+}
+
+.team-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, .06);
+}
+
+.team-list li::before {
+    content: '✔';
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 800;
+    color: var(--accent);
+}
+
+.team-list li::before {
+    content: '👤';
+    font-size: 1rem;
+    color: var(--primary);
+}
+
+.skill {
+    display: block;
+    margin-top: .35rem;
+    font-size: .875rem;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+/* ---------- Video ---------- */
+.video-wrapper {
+    position: relative;
+    padding-top: 56.25%;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+    background: #000;
+}
+
+.video-wrapper video,
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ---------- Footer ---------- */
+footer.footer {
+    background: var(--primary-dark);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: .9rem;
+}
+
+/* ---------- Accessibility helpers ---------- */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.burger {
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+    :root {
+        /* tighten header for tiny screens */
+        --header-h: -;
+    }
+
+    /* Compact fixed header */
+    header.hero {
+        height: var(--header-h);
+        padding: 0 1rem;
+    }
+
+    /* Banner image crops shorter */
+    .home-banner img {
+        height: 280px;
+    }
+
+    /* Stack the feature highlight cards */
+    .features-highlight {
+        grid-template-columns: 1fr;
+        margin-top: 2rem;
+    }
+
+    /* Put team cards in a single column */
+    ul.team-list {
+        grid-template-columns: 1fr;
+    }
+
+    /* Shrink inner section spacing a bit */
+    section.section {
+        padding: 3rem 0 2rem;
+    }
+
+    .burger {
+        display: block;
+        background: none;
+        border: 0;
+        padding: .5rem .75rem;
+        font-size: 1.65rem;
+        /* ☰ size */
+        line-height: 1;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    /* collapse nav list by default */
+    #site-nav {
+        position: relative;
+    }
+
+    #site-nav ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 1rem 1rem;
+        margin: 0 auto;
+        background: var(--primary-dark);
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, .2);
+    }
+
+
+    #site-nav.open ul {
+        /* shown when toggled */
+        display: flex;
+    }
+
+    #site-nav ul li {
+        width: 100%;
+        text-align: left;
+        padding: 0;
+        /* reset */
+    }
+
+    #site-nav ul li a {
+        display: block;
+        width: 100%;
+        padding: .75rem 1.25rem;
+    }
+
+    .hero-inner {
+        position: relative;
+    }
+
+    .burger {
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+        z-index: 1001;
+    }
+
+    .logo {
+        padding-top: 0;
+        /* Optional: vertically centers it better */
+    }
+
+    /* Prevent nav from interfering with layout */
+    #site-nav {
+        flex: 1 1 100%;
+    }
+}
+
+/* -------- Tablet / small-laptop tweaks (601-992 px) ------ */
+@media (min-width: 601px) and (max-width: 992px) {
+
+    /* Two-up layout for features & team on midsize screens */
+    .features-highlight {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    ul.team-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhysicianConnect – Project Presentation</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!---- header ------------------------------------------------------------>
+    <header class="hero">
+        <div class="hero-inner container">
+            <a href="#top" class="logo">PhysicianConnect</a>
+
+            <nav aria-label="Primary navigation" id="site-nav">
+                <ul>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#users">Intended&nbsp;Users</a></li>
+                    <li><a href="#features">Major&nbsp;Features</a></li>
+                    <li><a href="#demo">Demo</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#postmortem">Post-mortem</a></li>
+                    <li>
+                        <a href="https://code.cs.umanitoba.ca/comp3350-summer2025/a01-g08-todo-everything"
+                            target="_blank">Project&Tab;↗</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="home-banner" id="top">
+        <img src="assets/hero_banner.png" alt="Doctor with patients">
+    </section>
+
+    <section class="intro">
+        <div class="container">
+            <p class="subtitle">Your streamlined scheduling &amp; patient-management — built for doctors.</p>
+        </div>
+
+        <div class="features-highlight container">
+            <div class="highlight">
+                <div class="circle">
+                    <img src="assets/Patient_History_Viewer_Icon.png" alt=" Medical History Icon">
+                </div>
+                <h4>Patient History<br>Viewer</h4>
+                <p>Access a patient's entire visit and treatment history in one place.</p>
+            </div>
+
+            <div class="highlight">
+                <div class="circle">
+                    <img src="assets/Alerts_Notifications_Icon.png" alt="Notifications Icon">
+                </div>
+                <h4>Alerts &<br>Notifications</h4>
+                <p>Never miss key updates—get alerts for bookings, meds, and more.</p>
+            </div>
+
+            <div class="highlight">
+                <div class="circle">
+                    <img src="assets/Medication_Prescription_Icon.png" alt="Prescription Icon">
+                </div>
+                <h4>Medication<br>Prescription</h4>
+                <p>Quickly prescribe meds and manage dosage instructions securely.</p>
+            </div>
+
+            <div class="highlight">
+                <div class="circle">
+                    <img src="assets/Appointment_Slot_Management_Icon.png" alt="Appointments Icon">
+                </div>
+                <h4>Appointment Slot Management</h4>
+                <p>Manage availability and view upcoming bookings in a clean, calendar-based interface.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <main>
+        <!-- Overview -->
+        <section id="overview" class="section">
+            <div class="container">
+                <h2>Project Overview &amp; Vision</h2>
+                <p><em>PhysicianConnect</em> is a centralized platform that simplifies communication between patients,
+                    physicians, and receptionists. We aim to reduce administrative friction, improve communication, and
+                    make it easier to manage appointments, billing, prescriptions, referrals and patient data in one
+                    place.</p>
+
+                <p>Physicians can set their availability, review pre-visit notes, and handle post-visit tasks like
+                    writing prescriptions, making referrals, and logging follow-ups all in one place. Patients can
+                    easily book appointments, receive updates, and access their medical information. Receptionists gain
+                    tools to coordinate visits, handle billing, and keep the clinic running smoothly.
+                </p>
+
+                <p>Fast, focused, and secure, PhysicianConnect cuts through the complexity of traditional EMRs so
+                    clinics can stay organized and deliver better care with less time spent on paperwork and more time
+                    focused on people.
+                </p>
+            </div>
+        </section>
+
+        <!-- Intended Users -->
+        <section id="users" class="section alt">
+            <div class="container">
+                <h2>Intended Users</h2>
+                <p><b>Physicians</b>, who need quick access to patient records, appointment schedules, prescribe
+                    medicine, managing patient referrals and internal messaging.
+                </p>
+                <p><b>Receptionists</b>, who handle appointment management, billing tasks, internal messaging and act as
+                    a bridge between patients and medical professionals.
+                </p>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section id="features" class="section">
+            <div class="container">
+                <h2>Major Functionality</h2>
+                <ul class="feature-list">
+                    <li>Calendar-based schedule management with availability blocks</li>
+                    <li>Instant syncing of patient-booked appointments</li>
+                    <li>Pre-visit notes & history at a glance</li>
+                    <li>Medication prescription with dosage instructions</li>
+                    <li>Notification & alert system for doctors and patients</li>
+                    <li>Post-visit documentation: notes, prescriptions, and referrals</li>
+                    <li>Live messaging/chat between doctors and patients</li>
+                    <li>Billing & invoicing with patient-level detail</li>
+                    <li>Profile management for staff and users</li>
+                    <li>Secure, role-based data separation for doctors & patients</li>
+                    <li>Receptionist view with limited admin access</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Demo -->
+        <section id="demo" class="section alt">
+            <div class="container">
+                <h2>Feature Demo</h2>
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://youtu.be/B3RZYiaiTNo?si=Q64xFPnaoUZLq9C9"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Team -->
+        <section id="team" class="section">
+            <div class="container">
+                <h2>Contributors</h2>
+                <ul class="team-list">
+                    <li>Gagandeep Dolla<span class="skill">Throughout the project, I focused a lot on maintaining clean
+                            Git workflows, managing feature branches, resolving tricky merge conflicts, and keeping our
+                            history organized. I also worked on writing meaningful tests using JUnit, which helped
+                            improve reliability as we added more features. Since we were working as a team, I got to
+                            apply what I’ve learned from past courses and work experience about writing modular,
+                            testable code and making sure my changes integrated smoothly with everyone else’s work. This
+                            project really helped me sharpen those collaboration and debugging skills that matter in
+                            real-world development.</span></li>
+                    <li>Mohammad Islam<span class="skill">Taking the summer version of 3350 gave me a good
+                            idea of how teams usually work day to day, since we were putting in hours similar to a
+                            normal job. Working with tight deadlines brought out a level of productivity in me I didn’t
+                            know I had. I learned most about persistence from 3350, since I didn’t take 3380. I also got
+                            a much better understanding of why testing is important and how to actually do it properly,
+                            something I almost completely ignored in older projects. In terms of implementing features,
+                            while my mindset was initially focused more on just building things, I gradually shifted
+                            toward writing code that followed solid principles. Planning features with user stories
+                            helped me structure ideas better, something I will keep using as a tool for future projects.
+                            I also got solid experience with Git, like handling branches, fixing merge conflicts, and
+                            working in a shared repo.</span></li>
+                    <li>Pankaj Jhanji<span class="skill"> I think for me it would definitely have to be learning to get
+                            into a more leadership role/ QA role. Learning to go through other people’s code and leave
+                            feedback as a TA but this time around I was able to have a back and forth with them which
+                            was very nice, alongside that there was also the idea of finding bugs and assigning tickets,
+                            having to jump into various parts of the project to help out wherever I could. All these
+                            were very fun skills that I think developed further. </span></li>
+                    <li>Arjun Sarkar<span class="skill">One specific development skill I gained through this project
+                            would be learning how to manage and fuse feature branches effectively in a team environment.
+                            Even though I was familiar with Git before, through this project it taught me how to manage
+                            more complex workflows that involve working with multiple contributors, code reviews and
+                            merge conflicts. I am getting better at writing cleaner commits, discussing merge conflict
+                            issues with the team and structuring branches logically. Another useful experience I gained
+                            working in this project is working with a variety of user types such as physicians, and
+                            receptionists (and patients too but time didn’t permit us to do so). It is cool to view each
+                            user’s unique views and permissions. To me, testing and building these user types assisted
+                            me into thinking deeply about access control, user interface, authentication and overall
+                            user experience. It made me think critically about how each feature as well as user stories
+                            should behave depending on who is using it.</span></li>
+                    <li>Ibrahim Mamman<span class="skill">This project gave me a much stronger understanding of how Git
+                            works in a real team setting. Before this, I had only used Git in a basic way, but now I
+                            feel confident using branches, resolving merge conflicts, and contributing to a shared repo.
+                            I also learned a lot about teamwork—how to communicate effectively, coordinate tasks, and
+                            make sure everyone's changes fit together. On top of that, I really came to appreciate the
+                            software development cycle, especially Agile. I liked the rhythm of working in sprints,
+                            writing user stories, and regularly checking in to adapt our plans. It made the whole
+                            process feel more organized and productive.</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Postmortem -->
+        <section id="postmortem" class="section alt">
+            <div class="container">
+                <h2>Development Post‑mortem</h2>
+                <p><strong>What was the overall architecture of your system (particularly if it is different from the
+                        demo system)?</strong><br>
+                    Our system followed a MVC (Model-View-Controller) structure, which means we kept the logic, the
+                    interface, and the data in their own parts, which made it easier to update and test. It was more
+                    organized than the basic demo system we saw in class.</p>
+
+                <p><strong>What went right in the development process?</strong><br>
+                    We did really well at communicating as a team and keeping each other updated through daily
+                    check-ins. Our Git branches were well-named, our commits were clear, and we were careful about
+                    testing before merging code into the main project.</p>
+
+                <p><strong>What went wrong in the development process?</strong><br>
+                    At first, we ran into problems with merge conflicts because we didn’t always test or review things
+                    before merging, which caused bugs and delays.</p>
+
+                <p><strong>What would you do differently, if you had the chance to start over?</strong><br>
+                    If we could go back, we would plan out all the user roles, features, and implementations in more
+                    detail before we started building, so technical debt would have been much less than it was.</p>
+
+                <p><strong>How large is the project (number of methods, classes, etc)? How much of this is (roughly)
+                        devoted to each major system component? And any other quantifiables (e.g. if you have a record
+                        of hours spent on tasks).</strong></p>
+
+                <p><strong>Overall Project Size</strong><br>
+                    Total Classes: approximately 60 - 65 classes<br>
+                    Total Methods: approximately 200 - 250 methods<br>
+                    Major Components: 4 Main System Components</p>
+
+                <p><strong>Component Breakdown</strong><br>
+                    <strong>Presentation Layer (~40% of codebase)</strong><br>
+                    UI Components (Panels, Windows, Dialogs)<br>
+                    Main classes: PhysicianApp, ReceptionistApp, LoginScreen<br>
+                    UI Utilities: UITheme, UIConfig<br>
+                    Various specialized panels for different functionalities
+                </p>
+
+                <p><strong>Persistence Layer (~30% of codebase)</strong><br>
+                    Database implementations (SQLite)<br>
+                    Stub implementations for testing<br>
+                    Classes: AppointmentDB, PhysicianDB, MessageDB, etc.<br>
+                    Factory classes for persistence management</p>
+
+                <p><strong>Business Logic Layer (~20% of codebase)</strong><br>
+                    Manager classes: AppointmentManager, PhysicianManager, ReceptionistManager<br>
+                    Service classes: MessageService<br>
+                    Validation classes: PhysicianValidator, PrescriptionValidator</p>
+
+                <p><strong>Domain Objects (~10% of codebase)</strong><br>
+                    Core business entities: Physician, Receptionist, Appointment, Prescription, etc.<br>
+                    Supporting objects: TimeSlot, ServiceItem, Invoice, etc.</p>
+
+                <p><strong>Key Features Implementation</strong><br>
+                    Appointment Management<br>
+                    Physician/Receptionist Management<br>
+                    Messaging System<br>
+                    Billing and Invoicing<br>
+                    Prescription Management<br>
+                    Referral System<br>
+                    Notification System</p>
+
+                <p><strong>Architecture Patterns:</strong><br>
+                    MVC (Model-View-Controller) pattern<br>
+                    Repository pattern for data access<br>
+                    Factory pattern for object creation<br>
+                    Observer pattern for notifications</p>
+
+                <p><strong>Testing Coverage</strong><br>
+                    Test classes present for UI components<br>
+                    Mock implementations for testing<br>
+                    Unit tests for core functionality</p>
+
+                <p><strong>What took the most time? The least? Any surprises?</strong><br>
+                    Appointment Slot Management and Notifications were the most time consuming features in our project.
+                    Creating the notification feature was surprisingly a big hassle, and although its functionality
+                    worked, we were not able to make it work across two separate instances of the application at once
+                    and had to resort to creating two.</p>
+
+                <p><strong>Are there any particular design smells, or brilliant design decisions?</strong><br>
+                    One glaring design issue is that our physician and receptionist app components in the presentation
+                    layer are handling too much logic, which violates the Single Responsibility Principle. To address
+                    this, we plan to refactor them to better follow SOLID principles, improving maintainability and
+                    separation of concerns.</p>
+
+                <p><strong>Are there any outstanding bugs?</strong><br>
+                    To test messaging and notifications, we currently open two account dialogs within a single instance
+                    of the application. This setup leads to duplicate messages and alerts across the board. We haven’t
+                    yet found a way to share the database across multiple instances of the app, which would better
+                    reflect a real-world scenario where different users run the app independently.</p>
+
+                <p><strong>Did any features work better than expected?</strong><br>
+                    Yes, our appointment slot management views have been a valuable addition to the project and are
+                    truly one of its standout features. They provide an amazing interface for managing availability,
+                    scheduling appointments efficiently, and minimizing conflicts—making them central to the overall
+                    functionality and user experience of our application.</p>
+
+                <p><strong>Are you using any technologies other than what was required (e.g. JMock, GUI builders,
+                        etc.)?</strong><br>
+                    No, we adhered to the required technologies and did not use any additional tools or frameworks
+                    beyond what was specified.</p>
+
+                <p><strong>Are you using any specific techniques covered in the course (TDD, pair programming, scrums,
+                        etc)?</strong><br>
+                    We used test-driven development (TDD) for key parts of the logic, pair programming for trickier
+                    sections, and Scrum ideas like sprints and weekly check-ins to stay organized.</p>
+
+                <p><strong>How did the project change from your initial (iteration 0) vision or stories, or did it work
+                        out as predicted?</strong><br>
+                    Initially, we planned to design our app for both physicians and patients. However, upon feedback, we
+                    realized it didn't make sense for patients to use such a system directly. Hence we shifted our focus
+                    to creating an app for physicians and receptionists. This led to the development of features like
+                    billing and an overall appointment view of all physicians, and we modified some existing
+                    patient-related functionalities to better suit the receptionist's role.</p>
+
+                <p><strong>What did you learn about team or large project development? What will you start doing, keep
+                        doing, or stop doing next time?</strong><br>
+                    We learned that it’s super important to break down tasks, keep communication strong, and avoid big,
+                    risky changes late in the process.</p>
+
+                <p><strong>Can you draw any conclusions from what you’ve done?</strong><br>
+                    In the end, we learned that with solid teamwork, good planning, and patience through challenges like
+                    bugs and merge issues, it’s possible to build something useful and reliable as a group.</p>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 PhysicianConnect Project Team</p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener("scroll", () => {
+            const header = document.querySelector("header.hero");
+            if (window.scrollY > 40) {
+                header.classList.add("shrink");
+            } else {
+                header.classList.remove("shrink");
+            }
+        });
+
+        /* ---------------- Mobile-nav hamburger ---------------- */
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const nav = document.getElementById('site-nav');
+            const burger = document.createElement('button');
+
+            burger.className = 'burger';
+            burger.innerHTML = '☰';
+            burger.setAttribute('aria-label', 'Toggle menu');
+
+            /* append inside .hero-inner instead of before nav */
+            document.querySelector('.hero-inner').insertBefore(burger, nav);
+
+
+            /* insert burger just before the nav element */
+            nav.parentNode.insertBefore(burger, nav);
+
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('open');
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
